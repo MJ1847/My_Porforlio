@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tech & Smart Money Insights</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============= GLOBAL STYLES ============= -->
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: #f5f6f7;
+      color: #333;
+    }
+
+    a { text-decoration: none; color: #1b263b; }
+    a:hover { opacity: 0.7; }
+
+    /* HEADER */
+    header {
+      background: #0d1b2a;
+      padding: 30px 20px;
+      text-align: center;
+      color: white;
+    }
+    header h1 { margin: 0; font-size: 34px; }
+    header p { margin: 5px 0 0; font-size: 16px; }
+
+    /* NAVIGATION */
+    nav {
+      background: #1b263b;
+      padding: 12px 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: #e0e1dd;
+      padding: 45px 20px;
+      text-align: center;
+    }
+    .hero h2 { font-size: 28px; margin-bottom: 10px; }
+    .hero p { max-width: 700px; margin: auto; font-size: 17px; }
+
+    /* LAYOUT */
+    .container {
+      max-width: 1200px;
+      margin: 30px auto 40px auto;
+      display: flex;
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    /* MAIN CONTENT */
+    .content { flex: 3; }
+
+    .section-title {
+      font-size: 22px;
+      margin: 0 0 15px 0;
+      color: #0d1b2a;
+    }
+
+    .post {
+      background: white;
+      padding: 22px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .post h2 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #0d1b2a;
+    }
+    .post .meta {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 8px;
+    }
+    .post p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      flex: 1.2;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      height: fit-content;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .sidebar h3 {
+      margin-top: 0;
+      color: #0d1b2a;
+      font-size: 18px;
+    }
+    .sidebar p {
+      font-size: 14px;
+      color: #555;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 15px 0;
+    }
+    .sidebar ul li {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    /* EMAIL INPUT */
+    .input, .textarea {
+      width: 100%;
+      padding: 9px 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    .button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #1b263b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .button:hover {
+      opacity: 0.9;
+    }
+
+    /* COMMENTS / DISCUSSION */
+    .comments-section {
+      background: #f8f9fa;
+      padding: 22px;
+      border-radius: 8px;
+      margin-top: 35px;
+    }
+    .comments-section h3 {
+      margin-top: 0;
+      color: #0d1b2a;
+      font-size: 18px;
+    }
+    .comment {
+      margin-top: 15px;
+      padding: 10px 12px;
+      background: #ffffff;
+      border-radius: 6px;
+      border: 1px solid #e0e1dd;
+      font-size: 14px;
+    }
+    .comment strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #0d1b2a;
+      font-size: 13px;
+    }
+
+    /* HERO SECTIONS LOWER */
+    .hero-alt {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .hero-alt h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #0d1b2a;
+    }
+    .hero-alt p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0d1b2a;
+      color: white;
+      text-align: center;
+      padding: 22px 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      nav a {
+        display: inline-block;
+        margin: 5px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============= HEADER ============= -->
+  <header>
+    <h1>Tech & Smart Money Insights</h1>
+    <p>Career Growth • Productivity • Financial Wisdom</p>
+  </header>
+
+  <!-- ============= NAVIGATION ============= -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#career">Tech Careers</a>
+    <a href="#money">Smart Money</a>
+    <a href="#productivity">Productivity</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ============= HERO / INTRO ============= -->
+  <section id="home" class="hero">
+    <h2>Level Up Your Career, Money, and Mindset</h2>
+    <p>
+      Practical strategies for working professionals who want to break into tech, grow their income,
+      and build systems that actually fit real life.
+    </p>
+  </section>
+
+  <!-- ============= MAIN CONTENT AREA ============= -->
+  <div class="container">
+
+    <!-- MAIN COLUMN -->
+    <main class="content">
+
+      <!-- FEATURED SECTION -->
+      <h2 class="section-title">Featured Insight</h2>
+
+      <article class="post" id="career">
+        <h2>How to Transition Into a Tech Career in 2025</h2>
+        <div class="meta">Category: Tech Careers · 7 min read</div>
+        <p>
+          You don’t need to start from zero to get into tech. In this guide, we break down how to map
+          your existing skills, pick the right certifications, and build a portfolio that hiring
+          managers actually care about.
+        </p>
+        <a href="#">Read full article →</a>
+      </article>
+
+      <!-- REGULAR POSTS -->
+      <h2 class="section-title">Latest Posts</h2>
+
+      <article class="post" id="money">
+        <h2>5 Money Habits That Build Wealth Slowly & Safely</h2>
+        <div class="meta">Category: Smart Money · 6 min read</div>
+        <p>
+          Wealth is a series of small, boring decisions done consistently. We’ll walk through five
+          simple habits you can start this month — no complicated trading strategies, no hype.
+        </p>
+        <a href="#">Read full article →</a>
+      </article>
+
+      <article class="post" id="productivity">
+        <h2>Simple Productivity Systems for Busy Professionals</h2>
+        <div class="meta">Category: Productivity · 5 min read</div>
+        <p>
+          Instead of chasing the latest app, build a simple repeatable workflow: capture, prioritize,
+          execute, review. Here’s a practical system you can run in a notebook, Notion, or Excel.
+        </p>
+        <a href="#">Read full article →</a>
+      </article>
+
+      <article class="post">
+        <h2>How to Use Your Technical Background in Business Roles</h2>
+        <div class="meta">Category: Career Strategy · 8 min read</div>
+        <p>
+          Your engineering and troubleshooting experience is a superpower in operations, product, and
+          business analysis roles. Learn how to translate your projects into language that resonates
+          with managers and executives.
+        </p>
+        <a href="#">Read full article →</a>
+      </article>
+
+      <!-- DISCUSSION / COMMENTS SECTION -->
+      <section class="comments-section">
+        <h3>Join the Discussion</h3>
+        <p>
+          What resonated with you the most? Share your perspective, ask questions, or challenge an idea —
+          this space is for thoughtful, respectful debate.
+        </p>
+
+        <!-- Example comments (you can remove or replace) -->
+        <div class="comment">
+          <strong>Jordan • Reader</strong>
+          The breakdown on transitioning into tech without a CS degree really clicked for me. I’ve been
+          in operations for 7 years and finally see a path forward.
+        </div>
+        <div class="comment">
+          <strong>Alex • Reader</strong>
+          I’d love to see a deep dive on balancing certifications with real project work. Which matters more?
+        </div>
+
+        <!-- Comment form (static; platform will handle real logic) -->
+        <form>
+          <div style="margin-top:15px;">
+            <label for="name">Name</label><br>
+            <input id="name" class="input" type="text" placeholder="Your name">
+          </div>
+          <div style="margin-top:15px;">
+            <label for="comment">Comment</label><br>
+            <textarea id="comment" class="textarea" rows="4" placeholder="Share your thoughts..."></textarea>
+          </div>
+          <button type="submit" class="button">Post Comment</button>
+        </form>
+      </section>
+
+    </main>
+
+    <!-- SIDEBAR COLUMN -->
+    <aside class="sidebar">
+      <h3>About Me</h3>
+      <p>
+        I’m Melvin — engineer, MBA, and career optimizer. I write for people who are serious about
+        leveling up their work, money, and systems without burning out.
+      </p>
+
+      <h3>Popular Topics</h3>
+      <ul>
+        <li><a href="#career">Break into Tech from Another Field</a></li>
+        <li><a href="#money">Practical Money & Tax Basics</a></li>
+        <li><a href="#productivity">Systems for Busy Professionals</a></li>
+        <li><a href="#">Project Management & Real-World Execution</a></li>
+      </ul>
+
+      <h3>Weekly Playbook</h3>
+      <p>Get one actionable email per week — no spam, just real, tested ideas.</p>
+      <input type="email" class="input" placeholder="Your email address">
+      <button class="button">Subscribe</button>
+    </aside>
+
+  </div>
+
+  <!-- ============= ABOUT SECTION ============= -->
+  <section id="about" class="hero-alt" style="background:#ffffff;">
+    <h2>About This Blog</h2>
+    <p>
+      This blog exists for working professionals who want clarity and leverage. Each post is designed
+      to be something you can actually use — in your next 1:1, your next job search, or your next
+      financial decision.
+    </p>
+  </section>
+
+  <!-- ============= CONTACT SECTION ============= -->
+  <section id="contact" class="hero-alt" style="background:#e0e1dd;">
+    <h2>Contact</h2>
+    <p>
+      For collaboration, questions, or speaking, you can plug in your preferred contact method here
+      (email form, Calendly link, or social profiles).
+    </p>
+  </section>
+
+  <!-- ============= FOOTER ============= -->
+  <footer>
+    © 2025 Tech & Smart Money Insights · Built by Melvin Sambola
+  </footer>
+
+</body>
+</html>
+
